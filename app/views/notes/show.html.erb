@@ -1,0 +1,13 @@
+<p>
+  <b>Content:</b>
+  <%=h @note.content %>
+</p>
+
+<p>
+  <b>Index:</b>
+  <%=h @note.index %>
+</p>
+
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

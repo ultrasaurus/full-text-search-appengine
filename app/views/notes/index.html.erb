@@ -1,0 +1,29 @@
+<h1>Listing notes</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Index</th>
+  </tr>
+
+
+<% form_for :note, :url => { :action => "search" } do |f| %>
+   <%= f.text_field :query %>
+   <%= f.submit 'Find it' %>   
+<% end %>
+
+
+<% @notes.each do |note| %>
+  <tr>
+    <td><%=h note.content %></td>
+    <td><%=h note.index %></td>
+    <td><%= link_to 'Show', note %></td>
+    <td><%= link_to 'Edit', edit_note_path(note) %></td>
+    <td><%= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New note', new_note_path %>

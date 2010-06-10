@@ -1,0 +1,9 @@
+<% unless @notes.empty? %>
+
+<% @notes.each do |note| %>
+  <p><%= h note.content %></p>
+<% end %>
+<% else %>
+  <p>No notes match: <%= @query %></p>
+
+<% end %>
