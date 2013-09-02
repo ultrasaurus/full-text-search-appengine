@@ -1,6 +1,6 @@
 require 'appengine-rack'
 AppEngine::Rack.configure_app(
-    :application => 'application-id',
+    :application => 'full-text-search',
     :precompilation_enabled => true,
     :sessions_enabled => true,
     :version => "1")
